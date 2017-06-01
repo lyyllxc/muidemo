@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <h1 class="mui-title">this is demo</h1>
+	</header>
+	
+	<nav class="mui-bar mui-bar-tab">
+		<a id="pagea" class="mui-tab-item mui-active">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a id="pageb" class="mui-tab-item">
+			<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+			<span class="mui-tab-label">消息</span>
+		</a>
+		<a id="pagec" class="mui-tab-item">
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-tab-label">通讯录</span>
+		</a>
+		<a  id="paged" class="mui-tab-item">
+			<span class="mui-icon mui-icon-gear"></span>
+			<span class="mui-tab-label">设置</span>
+		</a>
+	</nav>
+	
+	<script type="text/javascript" charset="utf-8">
+		mui.init({
+			subpages:[{
+				url:'pagea.html',
+				id:'pagea',
+				styles:{
+					top: '45px',
+					bottom: '50px'
+				}
+			}]
+		});
+		mui.plusReady(function(){
+			var pagea=document.getElementById('pagea');
+			var pageb=document.getElementById('pageb');
+			var pagec=document.getElementById('pagec');
+			var paged=document.getElementById('paged');
+			pagea.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'pagea.html',
+					id:'pagea.html',
+					styles:{
+						top: '45px',
+						bottom: '50px'
+					},
+					createNew:false,
+					show:{
+				      autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      aniShow:'zoom-out',//页面显示动画，默认为”slide-in-right“；
+				      duration:200,//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				      event:'titleUpdate',//页面显示时机，默认为titleUpdate事件时显示
+				    }
+				});
+			});
+			pageb.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'pageb.html',
+					id:'pageb.html',
+					styles:{
+						top: '45px',
+						bottom: '50px'
+					},
+					createNew:false,
+					show:{
+				      autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      aniShow:'zoom-out',//页面显示动画，默认为”slide-in-right“；
+				      duration:200,//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				      event:'titleUpdate',//页面显示时机，默认为titleUpdate事件时显示
+				    }
+				});
+			});
+			pagec.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'pagec.html',
+					id:'pagec.html',
+					styles:{
+						top: '45px',
+						bottom: '50px'
+					},
+					createNew:false,
+					show:{
+				      autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      aniShow:'zoom-out',//页面显示动画，默认为”slide-in-right“；
+				      duration:200,//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				      event:'titleUpdate',//页面显示时机，默认为titleUpdate事件时显示
+				    }
+				});
+			});
+			paged.addEventListener('tap',function(){
+				mui.openWindow({
+					url:'paged.html',
+					id:'paged.html',
+					styles:{
+						top: '45px',
+						bottom: '50px'
+					},
+					createNew:false,
+					show:{
+				      autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      aniShow:'zoom-out',//页面显示动画，默认为”slide-in-right“；
+				      duration:200,//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				      event:'titleUpdate',//页面显示时机，默认为titleUpdate事件时显示
+				    }
+				});
+			});
+		});
+	</script>
+</body>
+</html>
